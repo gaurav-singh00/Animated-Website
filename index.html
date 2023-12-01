@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@800&family=Montserrat:wght@500&family=Poppins&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="loader">
+        <div id="wrapperload">
+            <div class="elem">
+                <img src="img/name.png" alt="name">
+            </div>
+            <div class="elem">
+                <h3>UI/UX Designer</h3>
+            </div>
+            <div class="elem">
+                <h3>loves to help brands</h3>
+            </div>
+            <div class="elem">
+                <img src="img/name.png" alt="name">
+            </div>
+        </div>
+    </div>
+    <div id="bg">
+        <nav>
+            <div class="navlogo">
+                 <img class="navitem" src="img/logo.png" alt="logo">
+            </div>
+            <div class="element">
+                <a class="navitem" href="#">Home</a>
+                <a class="navitem" href="#">Contact</a>
+                <i id="search" class="navitem ri-search-line"></i>
+                <i id="menu" class="navitem ri-menu-2-line"></i>
+            </div>
+        </nav>
+        <div class="sections">
+            <img class="leftitem" id="splash" src="./img/rightSplash.png" alt="mainImage">
+            <div class="left">
+                <div id="smline"></div>
+                <h4 class="leftitem">Hello, I am 👋</h4>
+                <img class="leftitem" src="img/name.png" alt="Name">
+                <h5 class="leftitem">a designer from <span>ukraine.</span></h5>
+                <div class="leftitem" id="playbtn">
+                    <img src="img/playButton.png" alt="">
+                    <h5>see my <span class="bold">work profile</span></h5>
+                </div>
+                <div class="leftitem" id="contact">
+                    <h3>contact me</h3>
+                    <h6>Email : <span>someone@gmail.com</span></h6>
+                    <h6>Contact Number : <span>+91-123456789</span></h6>
+                </div>
+            </div>
+            <div id="right">
+                <img src="img/mainImage.png" alt="Image">
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+        integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script>
+        var menu = document.querySelector('#menu');
+        var bg = document.querySelector('#bg');
+        var currScreen = "full";
+
+        menu.addEventListener('click', () => {
+            if (currScreen === "full") {
+                currScreen = "half";
+                bg.style.transform = 'scale(.8)';
+                bg.style.borderRadius = '10px';
+                bg.style.boxShadow = '0 45px 65px rgba(0,0,0,0.50), 0 35px 22px rgba(0,0,0,0.16);'
+
+            } else {
+                currScreen = "full";
+                bg.style.transform = 'scale(1)';
+            }
+        })
+
+        if (currScreen === full) {
+            currScreen = half;
+
+        } else {
+            currScreen = full;
+            bg.style.transform = 'scale(1)';
+        }
+    </script>
+
+</body>
+
+</html>
